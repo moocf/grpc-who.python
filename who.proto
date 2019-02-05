@@ -1,0 +1,14 @@
+syntax = "proto3";
+package who;
+
+service Who {
+  rpc Call (CallRequest) returns (CallReply) {}
+}
+
+message CallRequest {
+  string args = 1;
+}
+
+message CallReply {
+  string out = 1;
+}
